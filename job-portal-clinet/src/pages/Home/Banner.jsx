@@ -1,12 +1,12 @@
 import React from 'react';
-import { motion, scale } from "motion/react"
+import { motion } from "motion/react"
 import team1 from '../../assets/team/group-six-indian-businessman-suits-posed-outdoor-winter-day-europe-looking-laptop.jpg'
 import team2 from '../../assets/team/man-checked-t-shirt-looking-laptop-half-turn-holding-opened-laptop-working-emotion-indoors-studio-waist-up-profile.jpg'
 
 
 const Banner = () => {
     return (
-        <div className="hero bg-base-200 min-h-screen max-w-5xl mx-auto">
+        <div className="hero bg-base-200  max-w-5xl mx-auto">
   <div className="hero-content flex-col lg:flex-row-reverse">
     <div className='flex-1'>
       <motion.img 
@@ -19,7 +19,6 @@ const Banner = () => {
       <motion.img 
       animate={{x:[100,150,100]}}
       transition={{duration:10 ,delay:3,repeat:Infinity}}
-      
       src={team2}
       className="max-w-sm w-80 border-blue-600 border-l-8 border-b-8  rounded-t-4xl rounded-br-4xl shadow-2xl object-cover"
     />
