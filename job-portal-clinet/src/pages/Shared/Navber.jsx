@@ -15,6 +15,20 @@ const Navber = () => {
   }
   const links = <>
     <li><NavLink to='/'>Home</NavLink></li>
+    {/* for applicant link */}
+    {
+      user && <>
+      <li><NavLink to='/myApplication'>My application</NavLink></li>
+      </>
+    }
+    {/* for recruter */}
+    {
+      user && 
+      <>
+        <li><NavLink to='/addJob'>Add job</NavLink></li>
+        <li><NavLink to='/myPostedJobs'>My posted jobs</NavLink></li>
+      </>
+    }
   </>
   return (
     <div className="navbar bg-base-100 shadow-sm">

@@ -4,10 +4,9 @@ import useAuth from '../../Hooks/UseAuth';
 import axios from 'axios';
 import Swal from 'sweetalert2';
 
-
 const JobApplay = () => {
-    const { user } = useAuth()
-    const jobId = useParams();
+    const { user } = useAuth();
+    const {id:jobId} = useParams();
     console.log(user)
     const handleApplyForm = (e) => {
         e.preventDefault()
@@ -15,10 +14,10 @@ const JobApplay = () => {
         const linkdin = form.linkdin.value;
         const github = form.github.value;
         const resume = form.resume.value;
-        console.log(linkdin, github, resume)
+        console.log(linkdin, github, resume);
         const application = {
             jobId,
-            application: user.email,
+            applicant: user.email,
             linkdin,
             github,
             resume,
