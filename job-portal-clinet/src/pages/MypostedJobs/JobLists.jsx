@@ -22,7 +22,7 @@ const JobLists = ({ JobsCreatedByPromise }) => {
                         {/* row 1 */}
                       {
                         jobs.map((job,index)=>
-                              <tr>
+                              <tr key={job._id}>
                             <th>{index+1}</th>
                             <td>{job.title}</td>
                             <td>{job.deadline}</td>
